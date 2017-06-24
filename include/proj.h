@@ -5,7 +5,7 @@
 ** Login   <mathias.descoin@epitech.eu@epitech.net>
 ** 
 ** Started on  Sat Jun 24 10:07:13 2017 Mathias
-** Last update Sat Jun 24 10:16:12 2017 Mathias
+** Last update Sat Jun 24 10:57:05 2017 Mathias
 */
 
 #ifndef PROJ_H_
@@ -43,5 +43,15 @@ char **print_exec_begin(char **arg, char *bin);
 void putstr(char *str, char *plus);
 void print_exec(char **arg, char *bin);
 int my_cmp(char *str, char *cmp);
+void exec_it_begin_sequel(char *name, int *file);
+void exec_it_begin(char *name, int file);
+char *take_path(char *file, char *path);
+void print_whith_res(t_all *all, char *bin);
+void print_exec_input_and_res(t_all *all, char *bin, char *name, int file);
+t_all *fill_it(char *str, char *bin, char *name);
+void free_struct(t_all *all);
+void exec_it_sequel(char *name, char *bin, char *file, char *str);
+void exec_it(char *name, char *bin, char *file);
+void all_exec(char *name, char *bin, char *file);
 
 #endif /* !PROJ_H_ */

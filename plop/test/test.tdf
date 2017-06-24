@@ -1,4 +1,0 @@
-ARGS:-e
-INPUT:../toto
-RES:First line$
-Second line$
