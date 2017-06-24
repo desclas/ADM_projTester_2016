@@ -5,7 +5,7 @@
 ** Login   <mathias.descoin@epitech.eu@epitech.net>
 ** 
 ** Started on  Sat Jun 24 10:53:57 2017 Mathias
-** Last update Sat Jun 24 10:55:08 2017 Mathias
+** Last update Sat Jun 24 11:02:46 2017 Mathias
 */
 
 #include "proj.h"
@@ -72,7 +72,7 @@ void print_whith_res(t_all *all, char *bin)
   else
     {
       close(pipe_fd[0]);
-      dup2(all->input, 0);
+      dup2((all->input == -1 ? 0 : all->input), 0);
       dup2(pipe_fd[1], 1);
       execvp(bin, all->arg);
       exit(0);
@@ -83,21 +83,18 @@ void print_whith_res(t_all *all, char *bin)
 
 void print_exec_input_and_res(t_all *all, char *bin, char *name, int file)
 {
-  if (all->input != -1)
+  exec_it_begin(name, file);
+  if (all->res != NULL)
+    print_whith_res(all, bin);
+  else
     {
-      exec_it_begin(name, file);
-      if (all->res != NULL)
-	print_whith_res(all, bin);
+      if (fork() > 0)
+	wait(&file);
       else
 	{
-	  if (fork() > 0)
-	    wait(&file);
-	  else
-	    {
-	      dup2(all->input, 0);
-	      execvp(bin, all->arg);
-	      exit(0);
-	    }
+	  dup2((all->input == -1 ? 0 : all->input), 0);
+	  execvp(bin, all->arg);
+	  exit(0);
 	}
     }
 }
