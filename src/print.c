@@ -5,7 +5,7 @@
 ** Login   <mathias.descoin@epitech.eu@epitech.net>
 ** 
 ** Started on  Sat Jun 24 10:14:49 2017 Mathias
-** Last update Sat Jun 24 10:16:14 2017 Mathias
+** Last update Sat Jun 24 11:31:49 2017 Mathias
 */
 
 #include "proj.h"
@@ -28,7 +28,7 @@ char **print_exec_begin(char **arg, char *bin)
   char **tmp;
   char *str;
   int i;
-  
+
   tmp = malloc(sizeof(char *) * 2);
   str = calloc(strlen(bin) + 2, sizeof(char));
   strcpy(str, bin);

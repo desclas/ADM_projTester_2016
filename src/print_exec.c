@@ -5,7 +5,7 @@
 ** Login   <mathias.descoin@epitech.eu@epitech.net>
 ** 
 ** Started on  Sat Jun 24 10:53:57 2017 Mathias
-** Last update Sat Jun 24 11:02:46 2017 Mathias
+** Last update Sat Jun 24 11:32:29 2017 Mathias
 */
 
 #include "proj.h"
@@ -13,7 +13,7 @@
 void exec_it_begin_sequel(char *name, int *file)
 {
   int i;
-  
+
   i = *file - 1;
   write(1, "[", 1);
   while (name[++i] != '/')
