@@ -1,4 +1,4 @@
 ARGS:-e
-INPUT:toto
+INPUT:../toto
 RES:First line$
 Second line$
