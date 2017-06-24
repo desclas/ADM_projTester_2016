@@ -5,7 +5,7 @@
 ** Login   <mathias.descoin@epitech.eu@epitech.net>
 ** 
 ** Started on  Sat Jun 24 10:12:07 2017 Mathias
-** Last update Sat Jun 24 10:13:21 2017 Mathias
+** Last update Sat Jun 24 14:45:14 2017 Mathias
 */
 
 #include "proj.h"
@@ -85,6 +85,7 @@ void check_bin(char *name, int ch)
 
   if (access(name, F_OK | X_OK) != 0)
     {
+      is_path(name);
       if ((tmp = getenv("PATH")) == NULL)
 	exit(84);
       sv = split(tmp, ':');

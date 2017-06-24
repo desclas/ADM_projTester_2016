@@ -5,10 +5,23 @@
 ** Login   <mathias.descoin@epitech.eu@epitech.net>
 ** 
 ** Started on  Thu Jun 22 10:43:31 2017 Mathias
-** Last update Sat Jun 24 10:57:11 2017 Mathias
+** Last update Sat Jun 24 14:44:39 2017 Mathias
 */
 
 #include "proj.h"
+
+void is_path(char *name)
+{
+  int i;
+
+  i = 0;
+  while (name[i] != '\0')
+    {
+      if (name[i] == '/')
+	free_tab(NULL, NULL, 84, 1);
+      i += 1;
+    }
+}
 
 void main_sequel(int av, char **ac, char *str)
 {

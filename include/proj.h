@@ -5,7 +5,7 @@
 ** Login   <mathias.descoin@epitech.eu@epitech.net>
 ** 
 ** Started on  Sat Jun 24 10:07:13 2017 Mathias
-** Last update Sat Jun 24 10:57:05 2017 Mathias
+** Last update Sat Jun 24 14:44:53 2017 Mathias
 */
 
 #ifndef PROJ_H_
@@ -53,5 +53,6 @@ void free_struct(t_all *all);
 void exec_it_sequel(char *name, char *bin, char *file, char *str);
 void exec_it(char *name, char *bin, char *file);
 void all_exec(char *name, char *bin, char *file);
+void is_path(char *name);
 
 #endif /* !PROJ_H_ */
