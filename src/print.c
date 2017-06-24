@@ -5,7 +5,7 @@
 ** Login   <mathias.descoin@epitech.eu@epitech.net>
 ** 
 ** Started on  Sat Jun 24 10:14:49 2017 Mathias
-** Last update Sat Jun 24 11:31:49 2017 Mathias
+** Last update Sat Jun 24 14:27:13 2017 Mathias
 */
 
 #include "proj.h"
@@ -52,7 +52,7 @@ void print_exec(char **arg, char *bin)
 
   if (fork() == 0)
     {
-      execvp(bin, arg);
+      (access(bin, F_OK | X_OK) == 0 ? execv(bin, arg) : execvp(bin, arg));
       exit(0);
     }
   else

@@ -5,7 +5,7 @@
 ## Login   <mathias.descoin@epitech.eu@epitech.net>
 ## 
 ## Started on  Wed Jun 21 18:41:03 2017 Mathias
-## Last update Sat Jun 24 10:58:47 2017 Mathias
+## Last update Sat Jun 24 14:11:50 2017 Mathias
 ##
 
 SRC	=	src/main.c		\
@@ -19,7 +19,7 @@ OBJ	=	$(SRC:.c=.o)
 
 NAME	=	projTester
 
-CFLAGS	+=	-Iinclude -Wall -Werror -Wextra -pedantic
+CFLAGS	+=	-Iinclude -Wall -Werror -Wextra -pedantic -g3
 
 all: $(NAME)
 
