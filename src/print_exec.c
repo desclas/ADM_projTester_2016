@@ -5,7 +5,7 @@
 ** Login   <mathias.descoin@epitech.eu@epitech.net>
 ** 
 ** Started on  Sat Jun 24 10:53:57 2017 Mathias
-** Last update Sat Jun 24 14:28:13 2017 Mathias
+** Last update Sat Jun 24 15:30:04 2017 Mathias
 */
 
 #include "proj.h"
@@ -45,10 +45,10 @@ char *take_path(char *file, char *path)
   char *str;
   int i;
 
-  str = calloc(strlen(file) + strlen(file) + 2, sizeof(char));
+  str = calloc(strlen(path) + strlen(file) + 2, sizeof(char));
   strcpy(str, path);
   i = strlen(path);
-  while (str[--i] != -1 && str[i] != '/');
+  while (--i != -1 && str[i] != '/');
   while (str[++i] != '\0')
     str[i] = '\0';
   strcat(str, file);

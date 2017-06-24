@@ -5,7 +5,7 @@
 ** Login   <mathias.descoin@epitech.eu@epitech.net>
 ** 
 ** Started on  Sat Jun 24 10:55:57 2017 Mathias
-** Last update Sat Jun 24 10:57:07 2017 Mathias
+** Last update Sat Jun 24 15:12:57 2017 Mathias
 */
 
 #include "proj.h"
@@ -97,5 +97,5 @@ void all_exec(char *name, char *bin, char *file)
 	}
       free(namelist);
     }
-  free(name);  
+  free(name);
 }
